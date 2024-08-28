@@ -58,6 +58,35 @@ a {
     color: var(--main-bg-color)
 }
 
+/********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
+
+.header-booki{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.logo-header{
+    display: flex;
+width: 100px;
+height: auto;
+}
+
+/***** nav header contient deux liens, donc deux blocs imbriqués  *****/
+
+.nav-header{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    }
+
+.liens-header:hover{
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+    padding-top: 10px;
+}    
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
