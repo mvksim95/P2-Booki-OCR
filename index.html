@@ -17,39 +17,36 @@
 <body>
     <div class="main-container">
         <header>
-            <!-- Le header se compose de deux bloc imbriqués dans le header, le logo et la partie <nav> -->
-            <section class="header-booki">
-                        <img src="./images/logo/Booki.png" alt="logo-booki" class="logo-header">
+            <!-- Le header se compose de deux bloc imbriqués dans une div, le logo et la partie <nav> -->
+            <div class="header-booki">
+                        <img src="./images/logo/Booki@3x.png" alt="logo-booki" class="logo-header">
                     <nav class="nav-header">
                         <a href="#" class="liens-header">Hébergements</a>
                         <a href="#" class="liens-header">Activités</a>
                     </nav>
-            </section>   
-            
+            </div>   
         </header>
         <main>
 
-            <!-- Section concernant le formulaire de recherche -->
+            <!-- Section concernant le formulaire de recherche complet -->
             <section class="formulaire">
                 <div class="titreh1">
                     <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-                    <p>En plein centre-ville ou en pleine nature</p>
+                    En plein centre-ville ou en pleine nature
                 </div>
-                <section class="recherche">
+                <div class="recherche">
                         <i class="fa-solid fa-location-dot" style="color: black;"></i>
                             <div class="barre-recherche">
-                                <!-- je trouve qu'un placeholder pour l'input est plus approprié qu'une value -->
-                                <input type="text" placeholder="Marseille, France" class="input-recherche">
+                                <input type="text" value="Marseille, France" class="input-recherche">
                                 <button class="bouton-recherche">Rechercher</button>
                                 <button class="icone-recherche">
                                 <i class="fa-solid fa-magnifying-glass" style="color: white;""></i>
                                 </button>
                             </div>      
-                </section>
-
-            <!-- Section pour la partie filtre des recherches -->
-                <section class="filtres">
-                        <span class="titre-filtres">Filtres</span>
+                        </div>
+            <!-- div pour la partie filtre des recherches -->
+                <div class="filtres">
+                        <p class="titre-filtres">Filtres</p>
                             <button class="bouton-filtre">
                                 <i class="fa-solid fa-money-bill-wave"></i>
                                 Economique
@@ -66,12 +63,12 @@
                                 <i class="fa-solid fa-fire"></i>
                                 Nos pépites
                             </button>
-            </section>                     
-                    <div class="informations">
+                </div>                     
+                <div class="informations">
                             <i class="fa-solid fa-info"></i>
                             <span>Plus de 500 logements sont disponibles dans cette ville</span>
-                    </div>   
-            
+                </div>   
+            </section>
             <!-- **** Section pour la partie hébergements **** -->
         
             <div class="hebergements-and-populaires">
