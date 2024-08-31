@@ -5,7 +5,7 @@
 
 :root {
     --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
+    --main-bg-color: #f2f2f2;
     --filter-bg-color: #DEEBFF;
 }
 
@@ -37,13 +37,15 @@ a {
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
+/* ----- ajout de place card pour le fit ---- */
+
+.card img, .place-card img {
     object-fit: cover;
 }
 
@@ -63,6 +65,10 @@ a {
 
 button {
 cursor: pointer;
+}
+
+.small-title {
+    font-size: 18px;
 }
 
 /********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
@@ -215,6 +221,8 @@ font-size: 22px;
     border: 2px solid #f2f2f2;
     border-radius: 50%;
     font-size: 10px;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 
@@ -223,6 +231,7 @@ font-size: 22px;
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 .hebergements-and-populaires section {
@@ -230,7 +239,9 @@ font-size: 22px;
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    margin-top: 30px;
 }
+
 
 /****** Hebergements ***********/
 .hebergements {
@@ -245,28 +256,53 @@ font-size: 22px;
 
 }
 
-.heb-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 33px;
+.heb-txt {
+    padding: 0px 15px 0px 15px;
 }
 
-.heb-bot {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 33px;
-}
-
-.heb-cards {
+.heb-top .heb-txt, .heb-bot .heb-txt{
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
+    justify-content: space-between;
 }
+
+.heb-top .card-title, .heb-bot .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.heb-top .heb-rating, .heb-bot,.heb-rating {
+    margin-bottom: 5px;
+}
+
+.heb-top .card-subtitle, .heb-bot .card-subtitle { 
+    margin: 0;
+}
+
+/*------ partie TOP  -------*/
+.heb-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.heb-top .card {
+    margin-top: 33px;
+}
+
+
+/*-------- partie BOT ---------*/
+
+.heb-bot {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap; 
+}
+
+.heb-bot .card {
+    margin-top: 33px;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -281,6 +317,7 @@ font-size: 22px;
 
 .populaires-cards .card {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 33px;
 }
 
@@ -313,7 +350,59 @@ font-size: 22px;
     margin-bottom: 5px;
 }
 
+/************ ACTIVITEES ****************/
 
+.activites .section-title {
+    margin-top: 33px;
+}
+
+.activites .place-txt {
+    margin-left: 15px;
+}
+
+.places-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 33px;
+}
+
+.place-card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 380px;
+    width: 297.5px;
+}
+
+/******** FOOTER **********/
+
+.footer-bloc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 0px 20px 0px;
+    justify-content: flex-start;
+}
+
+.f-content {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-right: 270px;
+}
+
+.footer-li {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.footer-bloc .small-title {
+margin: 30px 0px 10px 0px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -366,15 +455,25 @@ font-size: 22px;
         border-top: none;
     }
 
-    .icone-recherche{
+    .icone-recherche {
         display: inline-block;
         background-color: #0065FC;
     }
 
-    .bouton-recherche{
+    .bouton-recherche {
         display: none;
     }
 
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+    }
 
     /* ... */
 }
