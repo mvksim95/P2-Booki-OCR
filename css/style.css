@@ -237,6 +237,37 @@ font-size: 22px;
     width: 65%;
 }
 
+.hebergements img {
+    width: 250.33px;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.heb-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+
+.heb-bot {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+
+.heb-cards {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
