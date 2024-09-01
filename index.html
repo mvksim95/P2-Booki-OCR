@@ -21,8 +21,10 @@
             <div class="header-booki">
                         <img src="./images/logo/Booki@3x.png" alt="logo-booki" class="logo-header">
                     <nav class="nav-header">
-                        <a href="#" class="liens-header">Hébergements</a>
-                        <a href="#" class="liens-header">Activités</a>
+                        <ul>
+                            <li><a href="#" class="liens-header">Hébergements</a></li>
+                            <li><a href="#" class="liens-header">Activités</a></li>
+                        </ul>    
                     </nav>
             </div>   
         </header>
@@ -41,7 +43,7 @@
                                 <a href="#">
                                     <button class="bouton-recherche">Rechercher</button>
                                     <button class="icone-recherche">
-                                    <i class="fa-solid fa-magnifying-glass" style="color: white;""></i>
+                                    <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
                                     </button>
                                 </a>    
                             </div>      
@@ -49,6 +51,8 @@
             <!-- div pour la partie filtre des recherches -->
                 <div class="filtres">
                         <p class="titre-filtres">Filtres</p>
+            <!-- ------- 2 DIV pour les boutons pour facilité les medias queries ------ -->
+                        <div class="boutons-filtres1">
                             <button class="bouton-filtre">
                                 <i class="fa-solid fa-money-bill-wave"></i>
                                 Economique
@@ -57,6 +61,8 @@
                                 <i class="fa-solid fa-person"></i>
                                 Familial
                             </button>
+                        </div>
+                        <div class="boutons-filtres2">
                             <button class="bouton-filtre">
                                 <i class="fa-solid fa-heart"></i>
                                 Romantique
@@ -65,6 +71,7 @@
                                 <i class="fa-solid fa-fire"></i>
                                 Nos pépites
                             </button>
+                        </div>    
                 </div>       
              
                 <div class="informations">
@@ -326,7 +333,7 @@
         <footer>
             <div class="footer-bloc">
                 <ul class="f-content">
-                    <h4 class="small-title">A propos</h4>
+                    <h5 class="small-title">A propos</h5>
                     <a href="#"><li class="footer-li">Fonctionnement du site</li></a>
                     <a href="#"><li class="footer-li">Conditions générales</li></a>  
                     <a href="#"><li class="footer-li">Données et confidentialité</li></a>

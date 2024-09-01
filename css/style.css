@@ -41,9 +41,10 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
 }
 
-/* ----- ajout de place card pour le fit ---- */
+/* ----- ajout de .place-card pour le fit ---- */
 
 .card img, .place-card img {
     object-fit: cover;
@@ -73,12 +74,11 @@ cursor: pointer;
 
 /********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
 
-.header-booki{
+.header-booki {
     display: flex;
-    flex-wrap: wrap;
-    align-items:center;
-    justify-content: space-between;
-
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Espace entre le logo et les liens */
+    flex-wrap: wrap; /* Garde cette règle si nécessaire pour les petits écrans */
 }
 
 /*  dimension du logo prise en fonction du logo sur Figma */
@@ -89,24 +89,43 @@ height: 19px;
 
 /***** nav header contient deux liens, donc deux éléments imbriqués  *****/
 
-/* MAJ : Maj-section-et-formulaire */ 
-.nav-header{
+
+.nav-header {
+    flex: 1; /* Prend tout l'espace disponible à droite du logo */
+    display: flex;
+    justify-content: flex-end; /* Aligne les éléments du ul à droite */
+    margin: 0 auto; /* Centrage horizontal s'il y a un max-width */
+    align-items: center;
+}
+
+.nav-header ul {
+    list-style-type: none;
     display: flex;
     gap: 40px;
-    }
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Centre les éléments verticalement dans le nav */
+}
 
-.liens-header:hover{
-    display: flex;
-    justify-content: center;
+.nav-header li {
+    text-align: center;
+}    
+
+.nav-header a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid transparent;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.nav-header a:hover {
     color: #0065FC;
     border-top: 1px solid #0065FC;
-}  
-
-.liens-header{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid transparent;
 }
+
+
 
 /************* Section Formulaire **************/
 .formulaire {
@@ -124,7 +143,7 @@ font-size: 22px;
     flex-direction: row;
     padding: 0px;
     margin-top: 30px;
-    gap: 20px;
+    gap: 0px;
 }
 
 .barre-recherche{
@@ -136,9 +155,9 @@ font-size: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    background-color: rgb(242, 242, 242);
-    padding: 10px 15px;
-    border-radius: 10px 0px 0px 10px;
+    background-color: #f2f2f2;
+    padding: 15px 16px;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .input-recherche{
@@ -150,8 +169,8 @@ font-size: 22px;
 .bouton-recherche{
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 0px 10px 10px 0px;
+    padding: 15px 16px;
+    border-radius: 0px 15px 15px 0px;
     font-size: 16px;
     background-color: #0065FC;
 }
@@ -189,14 +208,22 @@ font-size: 22px;
     
 }
 
-.bouton-filtre{
+.boutons-filtres1, .boutons-filtres2{
+display: flex;
+gap: 15px;
+}
+
+
+.bouton-filtre {
     display: flex;
     flex-direction:row;
     align-items: center;
-    gap: 15px;
-    padding: 5px 25px;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    padding: 4px 19px;
     background-color: white;
-    border: 3px solid #F2F2F2;
+    border: 3px solid #e2e2e2ef;
     border-radius: 30px 30px 30px 30px;
     font-weight: bold;
 }
@@ -225,8 +252,6 @@ font-size: 22px;
     flex-shrink: 0;
 }
 
-
-
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -246,9 +271,13 @@ font-size: 22px;
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hebergements img {
+
     width: 250.33px;
     height: 124px;
     border-top-left-radius: 20px;
@@ -256,55 +285,49 @@ font-size: 22px;
 
 }
 
-.heb-txt {
-    padding: 0px 15px 0px 15px;
+.heb-top, .heb-bot {
+
+display: flex;
+justify-content: space-between;
+flex-wrap:wrap; 
 }
 
-.heb-top .heb-txt, .heb-bot .heb-txt{
+.heb-txt {
+
+    padding: 0px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+
 .heb-top .card-title, .heb-bot .card-title {
+
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.heb-top .heb-rating, .heb-bot,.heb-rating {
+.heb-rating {
+
     margin-bottom: 5px;
 }
 
 .heb-top .card-subtitle, .heb-bot .card-subtitle { 
+
     margin: 0;
 }
 
-/*------ partie TOP  -------*/
-.heb-top {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.heb-top .card {
+.heb-top .card, .heb-bot .card {
     margin-top: 33px;
 }
+/*------ partie TOP  -------*/
 
 
 /*-------- partie BOT ---------*/
 
-.heb-bot {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap:wrap; 
-}
-
-.heb-bot .card {
-    margin-top: 33px;
-}
-
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -315,10 +338,13 @@ font-size: 22px;
     align-items: center;
 }
 
+
 .populaires-cards .card {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row; 
     margin-top: 33px;
+
 }
 
 .populaires-cards img {
@@ -335,6 +361,7 @@ font-size: 22px;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    flex-wrap: nowrap;
 }
 
 .populaires-cards .card-title {
@@ -352,6 +379,11 @@ font-size: 22px;
 
 /************ ACTIVITEES ****************/
 
+.activites {
+    padding: 30px;
+
+}
+
 .activites .section-title {
     margin-top: 33px;
 }
@@ -363,7 +395,7 @@ font-size: 22px;
 .places-cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 33px;
 }
@@ -375,14 +407,16 @@ font-size: 22px;
     width: 297.5px;
 }
 
+
 /******** FOOTER **********/
 
 .footer-bloc {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 30px 0px 20px 0px;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-left: 30px;
+    
 }
 
 .f-content {
@@ -396,7 +430,6 @@ font-size: 22px;
 .footer-li {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
     align-items: baseline;
 }
 
@@ -425,8 +458,14 @@ margin: 30px 0px 10px 0px;
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         justify-content: space-between;
+    }
+
+    .populaires-cards .card {
+        height: 146px;
+        width: 100%;
+
     }
 
     .populaires-cards a {
@@ -446,34 +485,88 @@ margin: 30px 0px 10px 0px;
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    .main-container {
+        padding: 0px;
+    }
     
-    .liens-header:hover {
+    /* -------- HEADER -------- */
+
+    .header-booki {
         display: flex;
-        justify-content: center;
-        color: #0065FC;
-        border-bottom: 1px solid #0065FC;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .nav-header a {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .nav-header a:hover {
         border-top: none;
+    }
+
+    .header-booki a:hover{
+        border-bottom: 1px solid #0065FC;
+        width: 100%;
+
+    }
+
+/* --------RECHERCHE-FILTRES --------- */
+
+    .formulaire {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0px 20px 0px 20px;
+        flex-wrap: wrap;
     }
 
     .icone-recherche {
         display: inline-block;
         background-color: #0065FC;
+        border-radius: 10px;
+        padding: 15px 16px;
     }
 
     .bouton-recherche {
         display: none;
     }
 
-    .hebergements-and-populaires {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap-reverse;
-    }
-
-    .populaires-cards {
+    .filtres {
         display: flex;
         flex-direction: column;
     }
+    
+    .boutons-filtres1, .boutons-filtres2 {
+        display: flex;
+        align-items: center;
+    }
 
-    /* ... */
-}
+    -----------------------------------------
+
+    .populaires {
+        width: 100%;
+        order: 1;
+    }
+
+    .hebergements {
+        order: 2;
+    }
+
+    .place-card img{
+        height: 141px;
+    }
+
+    .populaires-cards {
+        display: block;
+
+    }
+
+    
+    }
+
+
+  
