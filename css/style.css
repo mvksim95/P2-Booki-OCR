@@ -95,29 +95,32 @@ height: 19px;
 
 /***** nav header contient deux liens, donc deux éléments imbriqués  *****/
 
-
-.nav-header {
-    flex: 1; /* Prend tout l'espace disponible à droite du logo */
+.header {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -50px;
+    margin-right: -50px;
     display: flex;
-    justify-content: flex-end; /* Aligne les éléments du ul à droite */
-    margin: 0 auto; /* Centrage horizontal s'il y a un max-width */
+    border-right: none;
+    gap: 50px;
     align-items: center;
+    justify-content: space-between;
 }
 
-.nav-header ul {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
+.logo-booki {
+    padding: 30px 50px;
+}
+
+.navigation ul{
+    display:flex ;
+    padding: 0px 50px 0px 50px;
+    gap: 68px;
+    list-style: none;
+    border-top: 1px solid transparent;
     margin: 0;
-    padding: 0;
-    align-items: center; /* Centre les éléments verticalement dans le nav */
 }
 
-.nav-header li {
-    text-align: center;
-}    
-
-.nav-header a {
+.navigation a {
     display: block;
     text-decoration: none;
     color: black;
@@ -126,10 +129,12 @@ height: 19px;
     padding-bottom: 48px;
 }
 
-.nav-header a:hover {
+.navigation a:hover {
     color: #0065FC;
     border-top: 1px solid #0065FC;
 }
+
+
 
 
 
@@ -536,37 +541,34 @@ flex-wrap:wrap;
         padding: 30px;
     }
 /* ENLEVER BACKGROUND */
-    .nav-header {
+
+    .header {
         display: flex;
-        background-color: #ffffff;
-        width: 100%;
-        justify-content: center;
-      
+        flex-direction: column;
+        gap: 0px;
     }
-    /* ICI -------------------- */
-    .nav-header ul {
-        justify-content: space-between;
-        margin-left: 0px;
-        gap: 80px;
-        padding-right: 40px;
+
+    .logo-booki {
+        padding: 30px;
     }
-  
-    .nav-header a {
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-evenly;
+
+    .navigation a {
+        padding: 0;
+        border-bottom: 1px solid transparent;
         padding-bottom: 15px;
     }
 
-    .nav-header a:hover {
+    .navigation ul {
+        padding: 0px;
+    }
+
+    .navigation a:hover {
         border-top: none;
-    }
-
-    .header-booki a:hover{
         border-bottom: 1px solid #0065FC;
-        width: 100%;
-
     }
+
+
+
 
 /* --------RECHERCHE-FILTRES --------- */
 
@@ -575,6 +577,7 @@ flex-wrap:wrap;
         flex-direction: column;
         padding: 0px 20px 0px 20px;
         flex-wrap: wrap;
+        margin-top: 30px;
     }
 
     .icone-recherche {
