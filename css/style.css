@@ -64,12 +64,14 @@ a {
 
 /* Modification générale au code faite par moi même */
 
+
 button {
 cursor: pointer;
 }
 
 .small-title {
     font-size: 18px;
+    margin: 0;
 }
 
 /********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
@@ -81,6 +83,9 @@ cursor: pointer;
     flex-wrap: wrap; /* Garde cette règle si nécessaire pour les petits écrans */
 }
 
+.logo {
+    padding: 30px 50px 30px 0px;
+}
 /*  dimension du logo prise en fonction du logo sur Figma */
 .logo-header{
 width: 61px;
@@ -117,7 +122,7 @@ height: 19px;
     color: black;
     border-top: 1px solid transparent;
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 48px;
 }
 
 .nav-header a:hover {
@@ -129,12 +134,25 @@ height: 19px;
 
 /************* Section Formulaire **************/
 .formulaire {
+    display: flex;
+    flex-direction: column;
     margin-top: 35px;
+    gap: 35px;
 }
 
 h1 {
-margin-bottom: 5px;
-font-size: 22px;
+    font-size: 22px;
+    margin: 0;
+}
+
+.titreh1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.titreh1 p {
+    margin: 0px;
 }
 
 /* partie recherche */
@@ -142,7 +160,6 @@ font-size: 22px;
     display: flex;
     flex-direction: row;
     padding: 0px;
-    margin-top: 30px;
     gap: 0px;
 }
 
@@ -159,11 +176,12 @@ font-size: 22px;
     padding: 15px 16px;
     border-radius: 15px 0px 0px 15px;
 }
-
+/* j'ai l'impression que sur figma ce n'est pas un input mais juste un <p> avec align center donc je laisse en input  */
 .input-recherche{
     border: none;
     padding: 10px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .bouton-recherche{
@@ -195,6 +213,8 @@ font-size: 22px;
     flex-direction: column;
     justify-content: center;
     font-weight: bold;
+    margin: 0px;
+    font-size: 18px;
 
 }
 
@@ -203,8 +223,7 @@ font-size: 22px;
     flex-wrap: wrap;
     justify-content: start;
     flex-direction: row;
-    margin-top: 30px;
-    gap: 20px;
+    gap: 15px;
     
 }
 
@@ -226,6 +245,7 @@ gap: 15px;
     border: 3px solid #e2e2e2ef;
     border-radius: 30px 30px 30px 30px;
     font-weight: bold;
+    font-size: 17px;
 }
 
 .bouton-filtre:hover{
@@ -235,7 +255,6 @@ gap: 15px;
 .informations {
     display: flex;
     align-items: center;
-    margin-top: 30px;
     gap: 10px;
 }
 
@@ -257,6 +276,8 @@ gap: 15px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 40px;
+    margin-top: 35px;
 }
 
 .hebergements-and-populaires section {
@@ -264,25 +285,30 @@ gap: 15px;
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .hebergements img {
 
-    width: 250.33px;
+    width: 100%;
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
+}
+
+.heb-top .card, .heb-bot .card {
+    width: 240px;
+    height: 197px;
 }
 
 .heb-top, .heb-bot {
@@ -317,8 +343,9 @@ flex-wrap:wrap;
     margin: 0;
 }
 
-.heb-top .card, .heb-bot .card {
-    margin-top: 33px;
+.heb-top, .heb-bot {
+    gap: 30px;
+
 }
 /*------ partie TOP  -------*/
 
@@ -330,6 +357,7 @@ flex-wrap:wrap;
 
 .populaires {
     width: 32%;
+    gap: 30px;
 }
 
 .populaires-title {
@@ -338,12 +366,15 @@ flex-wrap:wrap;
     align-items: center;
 }
 
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
 .populaires-cards .card {
     display: flex;
-    justify-content: space-between;
     flex-direction: row; 
-    margin-top: 33px;
 
 }
 
@@ -380,12 +411,11 @@ flex-wrap:wrap;
 /************ ACTIVITEES ****************/
 
 .activites {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
-
-}
-
-.activites .section-title {
-    margin-top: 33px;
+    margin-top: 35px;
+    gap: 30px;
 }
 
 .activites .place-txt {
@@ -397,7 +427,7 @@ flex-wrap:wrap;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 33px;
+    gap: 30px;
 }
 
 .place-card img {
@@ -414,8 +444,8 @@ flex-wrap:wrap;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 30px;
+    background-color: #f2f2f2;
+    gap: 230px;
     
 }
 
@@ -423,18 +453,8 @@ flex-wrap:wrap;
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    padding: 0px;
-    margin-right: 270px;
-}
-
-.footer-li {
-    margin-top: 20px;
-    display: flex;
-    align-items: baseline;
-}
-
-.footer-bloc .small-title {
-margin: 30px 0px 10px 0px;
+    padding: 20px;
+    gap: 15px;
 }
 
 
@@ -523,6 +543,9 @@ margin: 30px 0px 10px 0px;
         padding: 0px 20px 0px 20px;
         flex-wrap: wrap;
     }
+    .filtres {
+        gap: 20px;
+    }
 
     .icone-recherche {
         display: inline-block;
@@ -539,13 +562,42 @@ margin: 30px 0px 10px 0px;
         display: flex;
         flex-direction: column;
     }
-    
+
     .boutons-filtres1, .boutons-filtres2 {
-        display: flex;
-        align-items: center;
+        width: 100%;
+
+
     }
 
-    -----------------------------------------
+    /************ HEBERGEMENTS & POPULAIRES  **************/
+
+    .hebergements-and-populaires section {
+        padding: 20px;
+    }
+
+    .hebergements-and-populaires .card {
+        box-sizing: border-box;
+    }
+
+    .heb-bot, .heb-top {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .hebergements .card {
+        height: 207px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .hebergements img {
+        width: 100%;
+
+    }
+
 
     .populaires {
         width: 100%;
@@ -565,6 +617,12 @@ margin: 30px 0px 10px 0px;
 
     }
 
+
+    /****** ACTIVITE  ***********/
+
+    .activites {
+        padding: 20px;
+    }
     
     }
 
