@@ -76,23 +76,6 @@ cursor: pointer;
 }
 
 /********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
-
-.header-booki {
-    display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: space-between; /* Espace entre le logo et les liens */
-    flex-wrap: wrap; /* Garde cette règle si nécessaire pour les petits écrans */
-}
-
-.logo {
-    padding: 30px 50px 30px 0px;
-}
-/*  dimension du logo prise en fonction du logo sur Figma */
-.logo-header{
-width: 61px;
-height: 19px;
-}
-
 /***** nav header contient deux liens, donc deux éléments imbriqués  *****/
 
 .header {
@@ -111,25 +94,32 @@ height: 19px;
     padding: 30px 50px;
 }
 
-.navigation ul{
-    display:flex ;
-    padding: 0px 50px 0px 50px;
+.nav {
+    display: flex;
+    padding: 0px 50px;
     gap: 68px;
+    
+}
+
+.nav div{
+    display:flex ;
     list-style: none;
     border-top: 1px solid transparent;
     margin: 0;
 }
 
-.navigation a {
+.nav button {
     display: block;
     text-decoration: none;
     color: black;
     border-top: 1px solid transparent;
     padding-top: 15px;
     padding-bottom: 48px;
+    border: none;
+    background-color: white;
 }
 
-.navigation a:hover {
+.nav button:hover {
     color: #0065FC;
     border-top: 1px solid #0065FC;
 }
@@ -531,43 +521,52 @@ flex-wrap:wrap;
     
     /* -------- HEADER -------- */
 
-    .header-booki {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0;
-    }
-
-    .logo {
-        padding: 30px;
-    }
-/* ENLEVER BACKGROUND */
-
     .header {
         display: flex;
         flex-direction: column;
         gap: 0px;
     }
-
+    
     .logo-booki {
         padding: 30px;
     }
 
-    .navigation a {
+    .logo {
+        margin-bottom: -4px;
+    }
+
+    
+    .nav {
+        gap: 0;
         padding: 0;
-        border-bottom: 1px solid transparent;
-        padding-bottom: 15px;
+    }
+    
+    .nav button {
+        padding: 0; 
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f2f2f2;
+        width: 50vw;
+    }
+    
+    .nav div {
     }
 
-    .navigation ul {
-        padding: 0px;
+    .nav .btn-heb, .nav .btn-act {
+        display: flex;
+        box-sizing: border-box;
+        width: 50vw;
+        justify-content: center;
     }
-
-    .navigation a:hover {
+    
+    .nav button:hover {
         border-top: none;
-        border-bottom: 1px solid #0065FC;
     }
 
+    .nav .btn-heb:hover, .nav .btn-act:hover {
+        border-bottom: 2px solid #0065FC;
 
+    }
 
 
 /* --------RECHERCHE-FILTRES --------- */
@@ -617,6 +616,11 @@ flex-wrap:wrap;
 
     .hebergements-and-populaires section {
         padding: 20px;
+        border-radius: 0;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
     }
 
     .hebergements-and-populaires .card {
@@ -707,6 +711,8 @@ flex-wrap:wrap;
     .footer-bloc {
         gap: 50px;
         padding: 30px;
+        display: flex;
+        flex-direction: column;
     }
 
     .f-content {
