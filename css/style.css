@@ -114,7 +114,7 @@ cursor: pointer;
     color: black;
     border-top: 1px solid transparent;
     padding-top: 15px;
-    padding-bottom: 48px;
+    padding-bottom: 47px;
     border: none;
     background-color: white;
     font-size: 16px;
@@ -498,10 +498,6 @@ gap: 30px;
         width: 100%;
     }
 
-    .heb-bot, .heb-top {
-
-    }
-
     .populaires {
         width: 100%;
         gap: 20px;
@@ -593,9 +589,6 @@ gap: 30px;
         padding-bottom: 10px;
         border-bottom: 2px solid #f2f2f2;
         width: 50vw;
-    }
-    
-    .nav div {
     }
 
     .nav .btn-heb, .nav .btn-act {
