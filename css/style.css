@@ -117,6 +117,7 @@ cursor: pointer;
     padding-bottom: 48px;
     border: none;
     background-color: white;
+    font-size: 16px;
 }
 
 .nav button:hover {
@@ -124,15 +125,11 @@ cursor: pointer;
     border-top: 1px solid #0065FC;
 }
 
-
-
-
-
 /************* Section Formulaire **************/
 .formulaire {
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 30px;
     gap: 35px;
 }
 
@@ -321,8 +318,10 @@ gap: 15px;
 .heb-top, .heb-bot {
 
 display: flex;
-justify-content: space-between;
+justify-content: center;
 flex-wrap:wrap; 
+gap: 30px;
+
 }
 
 .heb-txt {
@@ -350,10 +349,10 @@ flex-wrap:wrap;
     margin: 0;
 }
 
-.heb-top, .heb-bot {
-    gap: 30px;
-
+.card-subtitle {
+    font-size: 14px;
 }
+
 /*------ partie TOP  -------*/
 
 
@@ -479,27 +478,41 @@ flex-wrap:wrap;
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+
+/* *** HEADER *** */
+
+
+/* *** FORMULAIRES RECHERCHE ET FILTRES *** */
+    .bouton-filtre {
+        font-size: 16px;
+    }
+
+/* *** HEBERGEMENTS ET POPULAIRES *** */
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 50px;
     }
 
     .hebergements {
         width: 100%;
     }
 
-    .bouton-filtre {
-        font-size: 16px;
+    .heb-bot, .heb-top {
+
     }
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        gap: 20px;
     }
 
     .populaires-cards {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
         justify-content: space-between;
+
     }
 
     .populaires-cards .card {
@@ -512,13 +525,35 @@ flex-wrap:wrap;
         width: 30%;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
+/* *** ACTIVITES **** */
 
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
+    .places {
+        width: 193.5px;
+}
+
+    .activites .place-txt {
+        margin-left: 15px;
+}
+
+    .places-cards {
+        gap: 15px;
+
+}
+
+    .place-card img {
+        height: 200px;
+        width: 193.5px;
+
+}
+
+
+
+/* *** FOOTER *** */
+
+    .footer-bloc {
+        gap: 30px;
+    
+}
 
   
 }
