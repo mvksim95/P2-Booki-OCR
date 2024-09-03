@@ -157,6 +157,7 @@ h1 {
     flex-direction: row;
     padding: 0px;
     gap: 0px;
+
 }
 
 .barre-recherche{
@@ -175,9 +176,19 @@ h1 {
 /* j'ai l'impression que sur figma ce n'est pas un input mais juste un <p> avec align center donc je laisse en input  */
 .input-recherche{
     border: none;
-    padding: 10px;
+    padding: 0px;
     font-weight: bold;
     font-size: 18px;
+    padding-left: 24px;
+    width: 195px;
+    height: 49px;
+    box-sizing: border-box;
+
+}
+
+.recherche input:focus {
+    outline: 2px solid #f2f2f2;
+
 }
 
 .bouton-recherche{
@@ -185,7 +196,7 @@ h1 {
     border: none;
     padding: 15px 16px;
     border-radius: 0px 15px 15px 0px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #0065FC;
 }
 /* /!\ hover à enlever à la fin de la création du site /!\ */
