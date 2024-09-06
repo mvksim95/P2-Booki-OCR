@@ -76,31 +76,33 @@ cursor: pointer;
 .small-title {
     font-size: 18px;
     margin: 0;
+    font-weight: bold;
 }
 
 /********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
 /***** nav header contient deux liens, donc deux éléments imbriqués  *****/
 
+header {
+    width: 100%;
+}
+
 .header {
-    padding-left: 0px;
-    padding-right: 0px;
     display: flex;
-    border-right: none;
-    gap: 50px;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+
 }
 
 .logo-booki {
-    padding: 30px 50px;
+    padding: 30px 50px 30px 0px;
 }
+
+
 
 .nav {
     display: flex;
-    padding: 0px 50px;
-    gap: 68px;
-    
+    padding: 0 0 0 50px;
+    gap: 68px;  
 }
 
 .nav div{
@@ -115,8 +117,7 @@ cursor: pointer;
     text-decoration: none;
     color: black;
     border-top: 1px solid transparent;
-    padding-top: 15px;
-    padding-bottom: 47px;
+    padding: 15px 0 47px 0;
     border: none;
     background-color: white;
     font-size: 16px;
@@ -470,14 +471,18 @@ gap: 15px;
 
 /******** FOOTER **********/
 
+footer{
+    width: 100%;
+    margin-top: 35px;
+    background-color: #f2f2f2;
+}
+
+
 .footer-bloc {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    background-color: #f2f2f2;
     gap: 230px;
-    margin-top: 35px;
-    
+
 }
 
 .f-content {
@@ -564,9 +569,9 @@ gap: 15px;
 
     .footer-bloc {
         gap: 30px;
+        width: 100vw;
     
 }
-
   
 }
 
@@ -765,10 +770,12 @@ gap: 15px;
         padding: 30px;
         display: flex;
         flex-direction: column;
+        width: 100vw;
+
     }
 
     .f-content {
-        padding: 0;
+        padding: 0 30px;
         margin: 0;
     }
     
