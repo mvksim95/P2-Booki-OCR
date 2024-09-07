@@ -739,6 +739,11 @@ footer{
 
     .div-heb a {
         width: 100%;
+
+    }
+
+    .heb-card {
+        box-sizing: border-box;
     }
 
 
