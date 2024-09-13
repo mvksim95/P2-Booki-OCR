@@ -66,9 +66,6 @@ a {
     color: var(--main-bg-color)
 }
 
-/* Modification générale au code faite par moi même */
-
-
 button {
 cursor: pointer;
 }
@@ -79,8 +76,8 @@ cursor: pointer;
     font-weight: bold;
 }
 
-/********* Header, divisé en deux blocs imbriquées, le logo "logo-header", puis les liens de nav "nav-header" *********/
-/***** nav header contient deux liens, donc deux éléments imbriqués  *****/
+/********* Header, divisé en deux, le logo booki "logo", puis les liens de nav "nav" *********/
+/***** la nav du header contient deux liens  *****/
 
 header {
     width: 100%;
@@ -110,27 +107,36 @@ header {
     gap: 68px;  
 }
 
+/* border top sur la div plutot que les liens pour éviter un conflit entre la bordure et le lien qui créer un mouvement non souhaité  */
+.btn-heb, .btn-act {
+
+    border-top: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn-heb:hover, .btn-act:hover {
+
+    border-top: 2px solid #0065FC;
+}
+
 .nav div{
     display:flex ;
     list-style: none;
-    border-top: 1px solid transparent;
     margin: 0;
 }
 
-.nav button {
+.nav a {
     display: block;
     text-decoration: none;
     color: black;
-    border-top: 1px solid transparent;
     padding: 15px 0 47px 0;
     border: none;
     background-color: white;
     font-size: 16px;
 }
 
-.nav button:hover {
+.nav a:hover {
     color: #0065FC;
-    border-top: 1px solid #0065FC;
+
 }
 
 /************* Section Formulaire **************/
@@ -158,8 +164,7 @@ h1 {
 
 /* partie recherche */
 .form {
-
-    display: flex;
+   display: flex;
    flex-direction: row;
    padding: 0px;
    gap: 0px;
@@ -476,23 +481,19 @@ gap: 15px;
 }
 
 
-
-
-
-
 /******** FOOTER **********/
 
 footer{
     width: 100%;
     margin-top: 35px;
     background-color: #f2f2f2;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
 }
-
 
 .footer-bloc {
     display: flex;
     flex-wrap: wrap;
-    gap: 230px;
 
 }
 
@@ -500,8 +501,14 @@ footer{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px 0px 20px 0;
     gap: 15px;
+    margin: 0;
+}
+
+.footer-bloc div {
+    width: 33.33%;
+
 }
 
 
@@ -511,47 +518,45 @@ footer{
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
-
-/* *** HEADER *** */
-
-
 /* *** FORMULAIRES RECHERCHE ET FILTRES *** */
-    .bouton-filtre {
-        font-size: 16px;
-    }
+
+.bouton-filtre {
+    font-size: 16px;
+}
 
 /* *** HEBERGEMENTS ET POPULAIRES *** */
-    .hebergements-and-populaires {
-        flex-direction: column;
-        gap: 50px;
-    }
 
-    .hebergements {
-        width: 100%;
-    }
+.hebergements-and-populaires {
+    flex-direction: column;
+    gap: 50px;
+}
 
-    .populaires {
-        width: 100%;
-        gap: 20px;
-    }
+.hebergements {
+    width: 100%;
+}
 
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        justify-content: space-between;
+.populaires {
+    width: 100%;
+    gap: 20px;
+}
 
-    }
+.populaires-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
 
-    .populaires-cards .card {
-        height: 146px;
-        width: 100%;
+}
 
-    }
+.populaires-cards .card {
+    height: 146px;
+    width: 100%;
 
-    .populaires-cards a {
-        width: 30%;
-    }
+}
+
+.populaires-cards a {
+    width: 30%;
+}
 
 /* *** ACTIVITES **** */
 
@@ -569,11 +574,6 @@ footer{
 
 /* *** FOOTER *** */
 
-    .footer-bloc {
-        gap: 100px;
-        width: 100vw;
-    
-}
   
 }
 
@@ -606,27 +606,25 @@ footer{
         padding: 0;
     }
     
-    .nav button {
-        padding: 0; 
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #f2f2f2;
-        width: 50vw;
-    }
 
-    .nav .btn-heb, .nav .btn-act {
+    .btn-heb a, .btn-act a{
         display: flex;
-        box-sizing: border-box;
+        box-sizing: border-box;       
         width: 50vw;
         justify-content: center;
-    }
-    
-    .nav button:hover {
-        border-top: none;
+        font-size: 16px;
+        padding: 0;
+        padding-bottom: 15px;
+
     }
 
-    .nav .btn-heb:hover, .nav .btn-act:hover {
+    .btn-heb, .btn-act {
+        border-bottom: 2px solid #f2f2f2;
+    }
+
+    .btn-heb:hover, .btn-act:hover {
         border-bottom: 2px solid #0065FC;
+        border-top: none;
 
     }
 
@@ -775,18 +773,26 @@ footer{
 
     /******** FOOTER ***********/
 
+    footer {
+        padding: 30px;
+    }
+
+    .footer-bloc div {
+        width: 100%;
+    }
+
     .footer-bloc {
         gap: 50px;
-        padding: 30px;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        width: 100vw;
 
     }
 
     .f-content {
         padding: 0;
         margin: 0;
+        padding-top: 15px;
     }
     
     }
