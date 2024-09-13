@@ -620,12 +620,13 @@ footer{
 
     .btn-heb, .btn-act {
         border-bottom: 2px solid #f2f2f2;
+        border-top-width: 0px;
+
     }
 
     .btn-heb:hover, .btn-act:hover {
         border-bottom: 2px solid #0065FC;
         border-top: none;
-
     }
 
 
