@@ -73,7 +73,7 @@ cursor: pointer;
 .small-title {
     font-size: 18px;
     margin: 0;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /********* Header, divisé en deux, le logo booki "logo", puis les liens de nav "nav" *********/
@@ -99,29 +99,25 @@ header {
     height: 19px;
 }
 
-
-
 .nav {
     display: flex;
     padding: 0 0 0 50px;
     gap: 68px;  
 }
 
-/* border top sur la div plutot que les liens pour éviter un conflit entre la bordure et le lien qui créer un mouvement non souhaité  */
-.btn-heb, .btn-act {
-
-    border-top: 2px solid rgba(0, 0, 0, 0);
-}
-
-.btn-heb:hover, .btn-act:hover {
-
-    border-top: 2px solid #0065FC;
-}
-
 .nav div{
     display:flex ;
     list-style: none;
     margin: 0;
+}
+
+/* border top sur la div plutot que les liens pour éviter un conflit entre la bordure et le lien qui créer un mouvement non souhaité  */
+.btn-heb, .btn-act {
+    border-top: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn-heb:hover, .btn-act:hover {
+    border-top: 2px solid #0065FC;
 }
 
 .nav a {
@@ -194,7 +190,7 @@ span.fa-solid.fa-location-dot {
 .input-recherche {
    border: none;
    padding: 0px;
-   font-weight: bold;
+   font-weight: 700;
    font-size: 18px;
    padding-left: 24px;
    width: 195px;
@@ -203,12 +199,12 @@ span.fa-solid.fa-location-dot {
 
 }
 
-.form input:focus {
-   outline: 2px solid #f2f2f2;
+.form input {
+   outline: 1px solid #f2f2f2;
 
 }
 
-.bouton-recherche{
+.bouton-recherche {
    color: white;
    border: none;
    padding: 15px 16px;
@@ -216,8 +212,8 @@ span.fa-solid.fa-location-dot {
    font-size: 18px;
    background-color: #0065FC;
 }
-/* /!\ hover à enlever à la fin de la création du site /!\ */
-.bouton-recherche:hover{
+/* /!\ hover non demandé dans la note de synthèse, mis simplement pour une meilleure appréciation du clic au survol pour la présentation /!\ */
+.bouton-recherche:hover {
    background-color:#0050c7;
 }
 
@@ -228,17 +224,17 @@ span.fa-solid.fa-location-dot {
 
 /* partie filtres */
 
-.titre-filtres{
+.titre-filtres {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0px;
     font-size: 18px;
 
 }
 
-.filtres{
+.filtres {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -247,7 +243,7 @@ span.fa-solid.fa-location-dot {
     
 }
 
-.boutons-filtres1, .boutons-filtres2{
+.boutons-filtres1, .boutons-filtres2 {
 display: flex;
 gap: 15px;
 }
@@ -262,16 +258,16 @@ gap: 15px;
     height: 50px;
     padding: 4px 19px;
     background-color: white;
-    border: 3px solid #e2e2e2ef;
+    border: 2px solid #D9D9D9;
     border-radius: 30px 30px 30px 30px;
 }
 
 .bouton-filtre span {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 17px;
 }
 
-.bouton-filtre:hover{
+.bouton-filtre:hover {
     background-color: #DEEBFF;
 }
 
@@ -287,10 +283,9 @@ gap: 15px;
     align-items: center;
     width: 20px; 
     height: 20px;
-    border: 2px solid #f2f2f2;
+    border: 1px solid #D9D9D9;
     border-radius: 50%;
     font-size: 10px;
-    margin-right: 1rem;
     flex-shrink: 0;
 }
 
@@ -345,7 +340,7 @@ gap: 15px;
     width: 28.73%;
 }
 
-.heb-card{
+.heb-card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -460,7 +455,7 @@ gap: 15px;
     gap: 30px;
 }
 
-.places-cards a{
+.places-cards a {
     display: flex;
     width: 22.2%;
     flex-grow: 1;
@@ -480,18 +475,19 @@ gap: 15px;
     border-top-right-radius: 20px;
 }
 
-.places-content {
+.places-title {
     padding: 20px 19px;
 }
 
-.places-txt h3{
+.places-title h3 {
     margin: 0;
 }
 
 
+
 /******** FOOTER **********/
 
-footer{
+footer {
     width: 100%;
     margin-top: 35px;
     background-color: #f2f2f2;
@@ -572,7 +568,7 @@ footer{
     height: 200px;
 }
 
-.places-cards a{
+.places-cards a {
     width: 20.94%;
     flex-grow: 1;
 }
@@ -615,7 +611,7 @@ footer{
     }
     
 
-    .btn-heb a, .btn-act a{
+    .btn-heb a, .btn-act a {
         display: flex;
         box-sizing: border-box;       
         width: 50vw;
@@ -649,7 +645,7 @@ footer{
         margin-top: 30px;
     }
 
-    .glass{
+    .glass {
         display: flex;
         align-items: center;
         border: none;
@@ -707,6 +703,10 @@ footer{
 
     }
 
+    .heb-txt {
+        gap: 4px;
+    }
+
     /* POPULAIRES */
 
     .populaires {
@@ -716,7 +716,7 @@ footer{
         margin-top: 35px;
     }
 
-    .place-card img{
+    .place-card img {
         height: 141px;
     }
 
